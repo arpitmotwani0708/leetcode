@@ -50,4 +50,8 @@ public class TwoSum {
     return null;
   }
 
+  public void test() {
+    Systemlout.println('Something');
+  }
+
 }
