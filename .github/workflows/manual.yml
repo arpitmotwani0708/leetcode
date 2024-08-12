@@ -1,0 +1,47 @@
+# Apache License
+# Version 2.0, January 2004
+# Author: Eugene Tkachenko
+
+name: Pull Request ChatGPT review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  ai_pr_reviewer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install -r .ai/io/nerdythings/requirements.txt
+      
+      - name: Run Reviewer Script
+        env:
+          GITHUB_HEAD_REF: https://github.com/arpitmotwani0708/
+          GITHUB_BASE_REF: https://github.com/
+          CHATGPT_KEY: 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
+          CHATGPT_MODEL: gpt-3.5
+          GITHUB_TOKEN: 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
+          TARGET_EXTENSIONS: java,kt,py
+          REPO_OWNER: 'arpitmo12'
+          REPO_NAME: 'ds_problems'
+          PULL_NUMBER: 1
+        run: |
+          python .ai/io/nerdythings/github_reviewer.py
+
+      - name: Upload result as an artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AI-requests
+          path: output.txt
+          retention-days: 1
