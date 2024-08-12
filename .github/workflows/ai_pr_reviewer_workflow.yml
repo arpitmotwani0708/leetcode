@@ -30,7 +30,7 @@ jobs:
           GITHUB_HEAD_REF: https://github.com/arpitmotwani0708/
           GITHUB_BASE_REF: https://github.com/
           CHATGPT_KEY: sk-svcacct-oNtpyGh1sZgf_VLpkNIbODSi4WgQ2HPkMrE4eCkfytYqg6ZXIT3BlbkFJwrjTCZ5YW8eAH6bGfCH72AMiIwkR_XBIsbMA7-fR4CF3W1gAA
-          CHATGPT_MODEL: gpt-3.5
+          CHATGPT_MODEL: gpt-3.5-turbo
           GITHUB_TOKEN: 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
           TARGET_EXTENSIONS: java,kt,py
           REPO_OWNER: arpitmotwani0708
