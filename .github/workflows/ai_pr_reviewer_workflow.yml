@@ -29,7 +29,7 @@ jobs:
         env:
           GITHUB_HEAD_REF: https://github.com/arpitmotwani0708/
           GITHUB_BASE_REF: https://github.com/
-          CHATGPT_KEY: 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
+          CHATGPT_KEY: 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
           CHATGPT_MODEL: gpt-3.5
           GITHUB_TOKEN: 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
           TARGET_EXTENSIONS: java,kt,py
