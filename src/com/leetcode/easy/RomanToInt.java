@@ -42,4 +42,6 @@ public class RomanToInt {
     System.out.println(romanToInt("MC"));
   }
 
+  public void test() {}
+
 }
