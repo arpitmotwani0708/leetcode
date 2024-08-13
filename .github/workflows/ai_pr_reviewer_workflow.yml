@@ -29,12 +29,12 @@ jobs:
         env:
           GITHUB_HEAD_REF: https://github.com/arpitmotwani0708/
           GITHUB_BASE_REF: https://github.com/
-          CHATGPT_KEY: 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
-          CHATGPT_MODEL: gpt-3.5
+          CHATGPT_KEY: 46c569691f614ae9b72ba028f618e2c1
+          CHATGPT_MODEL: gpt-4
           GITHUB_TOKEN: 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
           TARGET_EXTENSIONS: java,kt,py
-          REPO_OWNER: 'arpitmo12'
-          REPO_NAME: 'ds_problems'
+          REPO_OWNER: arpitmotwani0708
+          REPO_NAME: leetcode
           PULL_NUMBER: 1
         run: |
           python .ai/io/nerdythings/github_reviewer.py
